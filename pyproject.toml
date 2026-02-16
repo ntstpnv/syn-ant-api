@@ -7,6 +7,19 @@ dependencies = [
     "fastapi>=0.129.0",
     "langchain-ollama>=1.0.1",
     "langgraph>=1.0.8",
-    "pydantic-settings>=2.12.0",
+    "pydantic-settings>=2.13.0",
     "uvicorn>=0.40.0",
 ]
+
+[tool.ruff]
+builtins = ["_"]
+fix = true
+src = ["bot"]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+lines-between-types = 1
